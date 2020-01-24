@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import App from './App'
+import Vue from "vue";
+import App from "./App.vue";
 
-import vuetify from './plugins/vuetify'
-import { store } from './store'
+import vuetify from "./plugins/vuetify";
+import store from "./store";
 
 /**
  * This is the main entry point of the portlet.
@@ -13,19 +13,19 @@ import { store } from './store'
  * @param  {Object} params a hash with values of interest to the portlet
  * @return {void}
  */
-export default function index ({
+export default function index({
   portletNamespace,
   contextPath,
   portletElementId
 }) {
-  store.state.portletNamespace = portletNamespace
-  store.state.contextPath = contextPath
-  store.state.portletElementId = portletElementId
+  store.state.portletNamespace = portletNamespace;
+  store.state.contextPath = contextPath;
+  store.state.portletElementId = portletElementId;
 
-  Vue({
+  new Vue({
     vuetify,
     store,
     el: `#${portletElementId}`,
     render: h => h(App)
-  })
+  });
 }

@@ -1,12 +1,14 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
   state: {
-    portletNamespace: '',
-    contextPath: '',
-    portletElementId: ''
+    portletNamespace: "",
+    contextPath: "",
+    portletElementId: ""
   }
-})
+});
+
+export default store;
