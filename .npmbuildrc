@@ -1,13 +1,26 @@
 {
 	"translatorTextKey": "",
 	"supportedLocales": [],
-	"liferayDir": "/Users/patriceparny/Documents/Ippon/portal",
+	"liferayDir": "../../bundles/",
 	"webpack": {
 		"rules": [
+
+            {
+                "test": "src\\/.*\\.js$",
+                "use": "babel-loader"
+            },
 			{
-				"test": "src\\/.*\\.js$",
-				"use": "babel-loader"
-			}
+				"test": "src\\/.*\\.vue$/",
+				"loader": "vue-loader"
+            },
+            {
+                "test": "src\\/.*\\.scss$/",
+                "use": [
+                    "vue-style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            }
 		]
 	}
 }
