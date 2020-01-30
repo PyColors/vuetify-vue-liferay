@@ -1,6 +1,6 @@
 module.exports = {
   outputDir: "build/",
-  publicPath: "/o/vuetify-vue-portlet/",
+  publicPath: "/o/vue-purejs-portlet/",
   pages: {
     index: {
       entry: ".webpack/index.js",
